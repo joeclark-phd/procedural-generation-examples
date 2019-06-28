@@ -6,10 +6,66 @@ This repo contains a simple Java program to run some examples of procedural gene
 
 
 ## To run
-First, clone or download the **random-text-generators** project, `cd` into that directory, and use Maven to install it locally: `mvn install`
+First, clone or download the **random-text-generators** project, `cd` into that directory, and use Maven to install it to your local Maven repository: 
 
-Next, clone or download this repo to your system,
-and open and run it in IntelliJ or something because I sure can't figure out how to run it from the command line!
+    mvn install
+
+Next, clone or download this repo to your system, open and run it in IntelliJ or something.
+
+If you insist on running it from the command line, add the dependency to your classpath like so:
+
+    mvn compile
+    java -cp ".\target\classes\;C:\Users\<you>\.m2\repository\net\joeclark\proceduralgeneration\randomtextgenerators\1.0-SNAPSHOT\randomtextgenerators-1.0-SNAPSHOT.jar" Main
 
 ## Training data
 Training data files are stored in the `src/main/resources` directory if you'd like to add some of your own.
+
+## Example output
+
+    ROMAN NAMES:
+    trebonius
+    cumanlistine
+    tronius
+    castumus
+    capinius
+    uticus
+    callas
+    papinius
+    lentius
+    colius
+    
+    ROMAN NAMES ENDING IN -ia:
+    decia
+    duria
+    marcia
+    vetilia
+    famia
+    laecinicia
+    bucilia
+    pria
+    micia
+    luccia
+    
+    VIKING MALE NAMES:
+    lecnut
+    guthun
+    thorgræsi
+    audgisil
+    kollsvein
+    vifil
+    amund
+    varhall
+    svaldun
+    atli
+    
+    VIKING FEMALE NAMES:
+    thorbjorgunn
+    asgöta
+    maria
+    steinvor
+    klint
+    runa
+    spui
+    skuld
+    fastvi
+    ingith
