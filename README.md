@@ -22,7 +22,7 @@ Training data files are stored in the `src/main/resources` directory if you'd li
 
 ## Example output
 
-    ROMAN NAMES:
+    ROMAN NAMES (using MarkovTextGenerator):
     trebonius
     cumanlistine
     tronius
@@ -69,3 +69,15 @@ Training data files are stored in the `src/main/resources` directory if you'd li
     skuld
     fastvi
     ingith
+    
+    VIKING + ROMAN NAMES (using DoubleTextGenerator):
+    slode krystyn
+    hallagrim frumellius
+    thri surio
+    æskia sperto
+    bevil aurellus
+    asgzorfinn oratial
+    erpkell congrippus
+    horlabanke pomptljanus
+    thorfinn viburtius
+    osvipdløg nolquinus

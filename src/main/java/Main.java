@@ -1,3 +1,4 @@
+import net.joeclark.proceduralgeneration.DoubleTextGenerator;
 import net.joeclark.proceduralgeneration.MarkovTextGenerator;
 
 import java.io.IOException;
@@ -11,6 +12,7 @@ public class Main {
 
         System.out.println("Examples of random text using MarkovTextGenerator");
         MarkovTextGenerator markov;
+        DoubleTextGenerator doubler;
 
 
         try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/romans.txt"))) {
@@ -59,6 +61,19 @@ public class Main {
             e.printStackTrace();
         }
 
+
+        try(Stream<String> firstStream = Files.lines(Paths.get("src/main/resources/vikings_male.txt"));
+            Stream<String> secondStream = Files.lines(Paths.get("src/main/resources/romans.txt"))) {
+
+            doubler = new DoubleTextGenerator(new MarkovTextGenerator(firstStream),new MarkovTextGenerator(secondStream),null);
+            System.out.println("VIKING FIRST + ROMAN LAST NAMES:");
+            for(int i=0;i<10;i++) {
+                System.out.println(doubler.generateOne());
+            }
+            System.out.println();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
