@@ -22,62 +22,92 @@ Training data files are stored in the `src/main/resources` directory if you'd li
 
 ## Example output
 
-    ROMAN NAMES (using MarkovTextGenerator):
-    trebonius
-    cumanlistine
-    tronius
-    castumus
-    capinius
-    uticus
-    callas
-    papinius
-    lentius
-    colius
+    Examples of random text using MarkovTextGenerator
+    
+    ROMAN NAMES:
+    ligula
+    ancus
+    filius
+    colus
+    cotepos
+    inguonegorix
+    papullico
+    fasticens
+    sollicjan
+    verus
     
     ROMAN NAMES ENDING IN -ia:
-    decia
-    duria
-    marcia
-    vetilia
-    famia
-    laecinicia
-    bucilia
-    pria
-    micia
-    luccia
+    enrruscia
+    lucia
+    lucia
+    narcia
+    maria
+    maximia
+    ankrystia
+    maelinicia
+    tercia
+    mauquiria
     
     VIKING MALE NAMES:
-    lecnut
-    guthun
-    thorgræsi
-    audgisil
-    kollsvein
-    vifil
-    amund
-    varhall
-    svaldun
-    atli
+    asgauthor
+    eyvinxi
+    varthrin
+    than
+    iarli
+    trœdipday
+    blæng
+    æråsmbi
+    saxfn
+    hemingimundi
     
     VIKING FEMALE NAMES:
-    thorbjorgunn
-    asgöta
-    maria
-    steinvor
-    klint
-    runa
-    spui
-    skuld
-    fastvi
-    ingith
+    blæik
+    astvild
+    hild
+    hrodny
+    ragnfwhite
+    jarnurid
+    gudrun
+    jorunnhild
+    astvi
+    hildis
     
-    VIKING + ROMAN NAMES (using DoubleTextGenerator):
-    slode krystyn
-    hallagrim frumellius
-    thri surio
-    æskia sperto
-    bevil aurellus
-    asgzorfinn oratial
-    erpkell congrippus
-    horlabanke pomptljanus
-    thorfinn viburtius
-    osvipdløg nolquinus
+    Examples of random text using RandomDrawGenerator
+    
+    RANDOM DRAW UK SURNAMES
+    forshaw
+    trickett
+    ventura
+    gunning
+    sparkes
+    yeldon
+    whitehead
+    walpole
+    cumming
+    holt
+    
+    Examples of random text using DoubleTextGenerator
+    
+    VIKING MALE MARKOV TEXT + ROMAN MARKOV TEXT:
+    bjorn nelis
+    thidrnjojorn pastor
+    øpi  merus
+    hallvni sirilius
+    æskil commodus
+    gärdun ligula
+    thorar catus
+    hard titilis
+    thorodgæira elisauncus
+    autyrmivafni taenus
+    
+    VIKING FEMALE MARKOV TEXT + RANDOM DRAW UK SURNAME:
+    gerd craven
+    oddbjjorg vickers
+    hallgerd ellwood
+    hallveig mortimer
+    heith everett
+    gudrunna michel
+    jarngegärd leroy
+    nima saunders
+    hediirhild water
+    halla duckworth
