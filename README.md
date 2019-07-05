@@ -1,8 +1,12 @@
 # procedural-generation-examples
 
-This repo contains a simple Java program to run some examples of procedural generation from my `net.joeclark.proceduralgeneration` package:
+This repo contains a simple Java program to run some examples of procedural generation from my `net.joeclark.proceduralgeneration` package.
 
-- Currently there's only one artifact, **MarkovTextGenerator**, found in [joeclark-phd/random-text-generators](https://github.com/joeclark-phd/random-text-generators).  This reads text strings from a training data set (i.e. a file of real-world names) and generates original random text that should be similar-sounding to the training data. 
+- Random text generation from [joeclark-phd/random-text-generators](https://github.com/joeclark-phd/random-text-generators).  
+
+  - MarkovTextGenerator
+  - RandomDrawGenerator
+  - DoubleTextGenerator
 
 
 ## To run
