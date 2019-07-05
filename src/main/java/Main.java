@@ -20,7 +20,7 @@ public class Main {
         System.out.println();
 
         try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/romans.txt"))) {
-            markov = new MarkovTextGenerator(stream);
+            markov = new MarkovTextGenerator().train(stream);
             System.out.println("ROMAN NAMES:");
             for(int i=0;i<10;i++) {
                 System.out.println(markov.generateOne());
@@ -32,10 +32,10 @@ public class Main {
 
 
         try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/romans.txt"))) {
-            markov = new MarkovTextGenerator(stream);
+            markov = new MarkovTextGenerator().withEndFilter("ia").train(stream);
             System.out.println("ROMAN NAMES ENDING IN -ia:");
             for(int i=0;i<10;i++) {
-                System.out.println(markov.generateOne(4,12,null,"ia"));
+                System.out.println(markov.generateOne());
             }
             System.out.println();
         } catch (IOException e) {
@@ -43,7 +43,7 @@ public class Main {
         }
 
         try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/vikings_male.txt"))) {
-            markov = new MarkovTextGenerator(stream);
+            markov = new MarkovTextGenerator().train(stream);
             System.out.println("VIKING MALE NAMES:");
             for(int i=0;i<10;i++) {
                 System.out.println(markov.generateOne());
@@ -55,7 +55,7 @@ public class Main {
 
 
         try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/vikings_female.txt"))) {
-            markov = new MarkovTextGenerator(stream);
+            markov = new MarkovTextGenerator().train(stream);
             System.out.println("VIKING FEMALE NAMES:");
             for(int i=0;i<10;i++) {
                 System.out.println(markov.generateOne());
@@ -70,7 +70,7 @@ public class Main {
 
 
         try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/uk.txt"))) {
-            randomdraw = new RandomDrawGenerator(stream);
+            randomdraw = new RandomDrawGenerator().train(stream);
             System.out.println("RANDOM DRAW UK SURNAMES");
             for(int i=0;i<10;i++) {
                 System.out.println(randomdraw.generateOne());
@@ -87,7 +87,7 @@ public class Main {
         try(Stream<String> firstStream = Files.lines(Paths.get("src/main/resources/vikings_male.txt"));
             Stream<String> secondStream = Files.lines(Paths.get("src/main/resources/romans.txt"))) {
 
-            doubler = new DoubleTextGenerator(new MarkovTextGenerator(firstStream),new MarkovTextGenerator(secondStream),null);
+            doubler = new DoubleTextGenerator(new MarkovTextGenerator().train(firstStream),new MarkovTextGenerator().train(secondStream),null);
             System.out.println("VIKING MALE MARKOV TEXT + ROMAN MARKOV TEXT:");
             for(int i=0;i<10;i++) {
                 System.out.println(doubler.generateOne());
@@ -100,7 +100,7 @@ public class Main {
         try(Stream<String> firstStream = Files.lines(Paths.get("src/main/resources/vikings_female.txt"));
             Stream<String> secondStream = Files.lines(Paths.get("src/main/resources/uk.txt"))) {
 
-            doubler = new DoubleTextGenerator(new MarkovTextGenerator(firstStream),new RandomDrawGenerator(secondStream),null);
+            doubler = new DoubleTextGenerator(new MarkovTextGenerator().train(firstStream),new RandomDrawGenerator().train(secondStream),null);
             System.out.println("VIKING FEMALE MARKOV TEXT + RANDOM DRAW UK SURNAME:");
             for(int i=0;i<10;i++) {
                 System.out.println(doubler.generateOne());

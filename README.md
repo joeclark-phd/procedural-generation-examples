@@ -101,13 +101,13 @@ Training data files are stored in the `src/main/resources` directory if you'd li
     autyrmivafni taenus
     
     VIKING FEMALE MARKOV TEXT + RANDOM DRAW UK SURNAME:
-    gerd craven
-    oddbjjorg vickers
-    hallgerd ellwood
-    hallveig mortimer
-    heith everett
-    gudrunna michel
-    jarngegärd leroy
-    nima saunders
-    hediirhild water
-    halla duckworth
+    doæikstylve pomphrey
+    skuerd bostock
+    gulfhruda gillett
+    blesi ropple
+    thkatla lennon
+    oddis bush
+    freøvinunn ballantyne
+    asgerdis stoddart
+    herkja legge
+    ingrlaug thornley
