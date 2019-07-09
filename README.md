@@ -5,6 +5,7 @@ This repo contains a simple Java program to run some examples of procedural gene
 - Random text generation from [joeclark-phd/random-text-generators](https://github.com/joeclark-phd/random-text-generators).  
 
   - MarkovTextGenerator
+    - MarkovCasePreservingTextGenerator
   - RandomDrawGenerator
   - DoubleTextGenerator
 
@@ -76,6 +77,20 @@ Training data files are stored in the `src/main/resources` directory if you'd li
     astvi
     hildis
     
+    Examples of random text using MarkovCasePreservingTextGenerator
+    
+    UK SURNAMES (case preserved):
+    Farham
+    Trevory
+    Daly
+    Ackarson
+    Dunfarlan
+    Cawlings
+    Eanswort
+    Gascott
+    Farr
+    Shied
+
     Examples of random text using RandomDrawGenerator
     
     RANDOM DRAW UK SURNAMES

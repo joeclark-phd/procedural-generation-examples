@@ -1,4 +1,5 @@
 import net.joeclark.proceduralgeneration.DoubleTextGenerator;
+import net.joeclark.proceduralgeneration.MarkovCasePreservingTextGenerator;
 import net.joeclark.proceduralgeneration.MarkovTextGenerator;
 import net.joeclark.proceduralgeneration.RandomDrawGenerator;
 import org.slf4j.Logger;
@@ -63,6 +64,20 @@ public class Main {
         try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/vikings_female.txt"))) {
             markov = new MarkovTextGenerator().train(stream);
             System.out.println("VIKING FEMALE NAMES:");
+            for(int i=0;i<10;i++) {
+                System.out.println(markov.generateOne());
+            }
+            System.out.println();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Examples of random text using MarkovCasePreservingTextGenerator");
+        System.out.println();
+
+        try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/uk.txt"))) {
+            markov = new MarkovCasePreservingTextGenerator().train(stream);
+            System.out.println("UK SURNAMES (case preserved):");
             for(int i=0;i<10;i++) {
                 System.out.println(markov.generateOne());
             }
