@@ -1,6 +1,8 @@
 import net.joeclark.proceduralgeneration.DoubleTextGenerator;
 import net.joeclark.proceduralgeneration.MarkovTextGenerator;
 import net.joeclark.proceduralgeneration.RandomDrawGenerator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -9,7 +11,11 @@ import java.util.stream.Stream;
 
 public class Main {
 
+    private static Logger logger = LoggerFactory.getLogger(Main.class);
+
     public static void main (String[] args) {
+
+        logger.info("Beginning to run examples of random text generation");
 
         MarkovTextGenerator markov;
         DoubleTextGenerator doubler;
@@ -110,6 +116,7 @@ public class Main {
             e.printStackTrace();
         }
 
+        logger.info("Finished running examples of random text generation.");
 
     }
 
