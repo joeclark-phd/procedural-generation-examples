@@ -77,7 +77,7 @@ Training data files are stored in the `src/main/resources` directory if you'd li
     astvi
     hildis
     
-    Examples of random text using MarkovCasePreservingTextGenerator
+    Examples of random text using MarkovTextCasePreservingGenerator
     
     UK SURNAMES (case preserved):
     Farham

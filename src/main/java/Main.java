@@ -1,5 +1,5 @@
 import net.joeclark.proceduralgeneration.DoubleTextGenerator;
-import net.joeclark.proceduralgeneration.MarkovCasePreservingTextGenerator;
+import net.joeclark.proceduralgeneration.MarkovTextCasePreservingGenerator;
 import net.joeclark.proceduralgeneration.MarkovTextGenerator;
 import net.joeclark.proceduralgeneration.RandomDrawGenerator;
 import org.slf4j.Logger;
@@ -72,11 +72,11 @@ public class Main {
             e.printStackTrace();
         }
 
-        System.out.println("Examples of random text using MarkovCasePreservingTextGenerator");
+        System.out.println("Examples of random text using MarkovTextCasePreservingGenerator");
         System.out.println();
 
         try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/uk.txt"))) {
-            markov = new MarkovCasePreservingTextGenerator().train(stream);
+            markov = new MarkovTextCasePreservingGenerator().train(stream);
             System.out.println("UK SURNAMES (case preserved):");
             for(int i=0;i<10;i++) {
                 System.out.println(markov.generateOne());
