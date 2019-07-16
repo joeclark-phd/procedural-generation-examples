@@ -11,11 +11,15 @@ This repo contains a simple Java program to run some examples of procedural gene
 
 
 ## To run
-First, clone or download the **random-text-generators** project, `cd` into that directory, and use Maven to install it to your local Maven repository: 
+The **random-text-generators** package is now available from [Maven Central](https://search.maven.org/search?q=g:%22net.joeclark.proceduralgeneration%22%20AND%20a:%22randomtextgenerators%22).  Maven users, for example, import the dependency like so:
 
-    mvn install
+    <dependency>
+      <groupId>net.joeclark.proceduralgeneration</groupId>
+      <artifactId>randomtextgenerators</artifactId>
+      <version>1.0</version>
+    </dependency>
 
-Next, clone or download this repo to your system, open and run it in IntelliJ or something.
+Next, clone or download this repo to your system, open and run it in an IDE (I use IntelliJ).  Run the Main class.
 
 If you insist on running it from the command line, add the dependency to your classpath like so:
 
@@ -23,7 +27,7 @@ If you insist on running it from the command line, add the dependency to your cl
     java -cp ".\target\classes\;C:\Users\<you>\.m2\repository\net\joeclark\proceduralgeneration\randomtextgenerators\1.0-SNAPSHOT\randomtextgenerators-1.0-SNAPSHOT.jar" Main
 
 ## Training data
-Training data files are stored in the `src/main/resources` directory if you'd like to add some of your own.
+Training data files are stored in the `src/main/resources` directory if you'd like to add some of your own.  Contributions of data are welcome, as long as you're not violating someone's intellectual property.  Just fork and open a pull request.
 
 ## Example output
 
