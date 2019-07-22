@@ -19,12 +19,7 @@ The **random-text-generators** package is now available from [Maven Central](htt
       <version>1.0</version>
     </dependency>
 
-Next, clone or download this repo to your system, open and run it in an IDE (I use IntelliJ).  Run the Main class.
-
-If you insist on running it from the command line, add the dependency to your classpath like so:
-
-    mvn compile
-    java -cp ".\target\classes\;C:\Users\<you>\.m2\repository\net\joeclark\proceduralgeneration\randomtextgenerators\1.0-SNAPSHOT\randomtextgenerators-1.0-SNAPSHOT.jar" Main
+Το run this example suite, clone or download this repo to your system, open and run it in an IDE (I use IntelliJ).  Make sure it imports the dependencies (or use Maven for that).  Run the Main class.
 
 ## Training data
 Training data files are stored in the `src/main/resources` directory if you'd like to add some of your own.  Contributions of data are welcome, as long as you're not violating someone's intellectual property.  Just fork and open a pull request.
