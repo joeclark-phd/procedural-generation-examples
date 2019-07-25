@@ -72,6 +72,19 @@ public class Main {
             e.printStackTrace();
         }
 
+        try(Stream<String> stream1 = Files.lines(Paths.get("src/main/resources/animals.txt"));
+            Stream<String> stream2 = Files.lines(Paths.get("src/main/resources/vegetables.txt"));
+            Stream<String> stream3 = Files.lines(Paths.get("src/main/resources/minerals.txt"))) {
+            markov = new MarkovTextGenerator().withPrior(0.01).train(stream1).train(stream2);
+            System.out.println("BLENDED MODEL: ANIMALS + VEGETABLES:");
+            for(int i=0;i<10;i++) {
+                System.out.println(markov.generateOne());
+            }
+            System.out.println();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         System.out.println("Examples of random text using MarkovTextCasePreservingGenerator");
         System.out.println();
 

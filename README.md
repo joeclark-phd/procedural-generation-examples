@@ -82,6 +82,18 @@ If you'd like to add some data sets of your own, contributions of data are welco
     astvi
     hildis
     
+    BLENDED MODEL: ANIMALS + VEGETABLES: (requires v1.0.1)
+    marmaduckoo
+    mackpanthemu
+    racfish
+    cresgonfly
+    babfirebat
+    pola
+    armabbaga
+    beetp
+    seale
+    panzet
+
     Examples of random text using MarkovTextCasePreservingGenerator
     
     UK SURNAMES (case preserved):
