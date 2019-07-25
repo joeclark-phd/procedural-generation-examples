@@ -17,7 +17,7 @@ The **random-text-generators** package is now available from [Maven Central](htt
     <dependency>
       <groupId>net.joeclark.proceduralgeneration</groupId>
       <artifactId>randomtextgenerators</artifactId>
-      <version>1.0</version>
+      <version>1.0.1</version>
     </dependency>
 
 Το run this example suite, clone or download this repo to your system, open and run it in an IDE (I use IntelliJ).  Make sure it imports the dependencies (or use Maven for that).  Run the Main class.
