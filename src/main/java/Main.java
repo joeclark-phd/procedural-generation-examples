@@ -75,7 +75,7 @@ public class Main {
         System.out.println("Examples of random text using MarkovTextCasePreservingGenerator");
         System.out.println();
 
-        try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/uk.txt"))) {
+        try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/uk_surnames.txt"))) {
             markov = new MarkovTextCasePreservingGenerator().train(stream);
             System.out.println("UK SURNAMES (case preserved):");
             for(int i=0;i<10;i++) {
@@ -90,7 +90,7 @@ public class Main {
         System.out.println();
 
 
-        try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/uk.txt"))) {
+        try(Stream<String> stream = Files.lines(Paths.get("src/main/resources/uk_surnames.txt"))) {
             randomdraw = new RandomDrawGenerator().train(stream);
             System.out.println("RANDOM DRAW UK SURNAMES");
             for(int i=0;i<10;i++) {
@@ -119,7 +119,7 @@ public class Main {
         }
 
         try(Stream<String> firstStream = Files.lines(Paths.get("src/main/resources/vikings_female.txt"));
-            Stream<String> secondStream = Files.lines(Paths.get("src/main/resources/uk.txt"))) {
+            Stream<String> secondStream = Files.lines(Paths.get("src/main/resources/uk_surnames.txt"))) {
 
             doubler = new DoubleTextGenerator(new MarkovTextGenerator().train(firstStream),new RandomDrawGenerator().train(secondStream),null);
             System.out.println("VIKING FEMALE MARKOV TEXT + RANDOM DRAW UK SURNAME:");

@@ -11,6 +11,7 @@ This repo contains a simple Java program to run some examples of procedural gene
 
 
 ## To run
+
 The **random-text-generators** package is now available from [Maven Central](https://search.maven.org/search?q=g:%22net.joeclark.proceduralgeneration%22%20AND%20a:%22randomtextgenerators%22).  Maven users, for example, import the dependency like so:
 
     <dependency>
@@ -22,7 +23,12 @@ The **random-text-generators** package is now available from [Maven Central](htt
 Το run this example suite, clone or download this repo to your system, open and run it in an IDE (I use IntelliJ).  Make sure it imports the dependencies (or use Maven for that).  Run the Main class.
 
 ## Training data
-Training data files are stored in the `src/main/resources` directory if you'd like to add some of your own.  Contributions of data are welcome, as long as you're not violating someone's intellectual property.  Just fork and open a pull request.
+
+Training data files are stored in the `src/main/resources` directory. 
+
+A few of these (e.g. `romans.txt`, `vikings_male.txt`, `vikings_female.txt`, `uk_surnames.txt`) I compiled from public sources. Then I discovered and copied over 118 files of sample data from a treasure trove in this [Haxe-based name generator project](https://github.com/Tw1ddle/MarkovNameGenerator) by [Tw1ddle](https://github.com/Tw1ddle), which is under a CC BY-NC 4.0 license.
+
+If you'd like to add some data sets of your own, contributions of data are welcome! (As long as you're not violating someone's intellectual property.)  Just fork and open a pull request.
 
 ## Example output
 
