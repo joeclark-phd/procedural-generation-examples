@@ -26,7 +26,7 @@ The **random-text-generators** package is now available from [Maven Central](htt
 
 Training data files are stored in the `src/main/resources` directory. 
 
-A few of these (e.g. `romans.txt`, `vikings_male.txt`, `vikings_female.txt`, `uk_surnames.txt`) I compiled from public sources. Then I discovered and copied over 118 files of sample data from a treasure trove in this [Haxe-based name generator project](https://github.com/Tw1ddle/MarkovNameGenerator) by [Tw1ddle](https://github.com/Tw1ddle), which is under a CC BY-NC 4.0 license.
+A few of these (e.g. `romans.txt`, `vikings_male.txt`, `vikings_female.txt`, `uk_surnames.txt`) I compiled from public sources. Then I discovered and copied over 118 files of sample data from a treasure trove in this [Haxe-based name generator project](https://github.com/Tw1ddle/MarkovNameGenerator) by [Tw1ddle](https://github.com/Tw1ddle), which is under a CC BY-NC 4.0 license.  Lately I discovered a 15th-century list of names for dogs (!) from [https://doi.org/10.1484/J.VIATOR.1.103488](this article) and added that as another resource.
 
 If you'd like to add some data sets of your own, contributions of data are welcome! (As long as you're not violating someone's intellectual property.)  Just fork and open a pull request.
 
